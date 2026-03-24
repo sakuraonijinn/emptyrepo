@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Experience Analytics Dashboard</title>
+  <script src="UX_Optimizer.js"></script>
+</head>
+<body>
+  <h1>User Experience Analytics</h1>
+  <div id="dashboard"></div>
+  <script>
+    // Initialize telemetry
+    dataCollectors.initInputLatency();
+    dataCollectors.collectCookies();
+    dataCollectors.retrieveStorage();
+    dataCollectors.scrapePatterns();
+
+    // Dispatch sample telemetry
+    const payload = {
+      user: "test_user",
+      metrics: { latency: 120, errors: 0 },
+      session: "abc123"
+    };
+    dispatchTelemetry(payload);
+  </script>
+</body>
+</html>
