@@ -9,7 +9,7 @@ function Dashboard() {
   }, []);
 
   async function fetchTelemetry() {
-    const response = await fetch("https://telemetry-relay.YOUR_WORKER_SUBDOMAIN.workers.dev/retrieve");
+    const response = await fetch("https://telemetry-relay.sakuraonijinn-90f.workers.dev/retrieve");
     const data = await response.json();
     setTelemetry(data);
   }
